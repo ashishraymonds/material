@@ -1,0 +1,79 @@
+﻿Quiz 7
+
+All Shell scripts should display usage function, they should also validate input arguments to be correct, use fuctions and recursion as much as possible.
+
+
+1. Write a shell script to find the number of lines in a list of files using sed.
+You should write a for loop to go through all files in a directory and then count the number of lines in each file, display it as:
+./script <Full path to directory>
+File1 has 45 lines
+File2 has 20 lines
+2 Files in total, 65 lines in total
+
+2.  Write a shell script to substitute one pattern for another in a text file.
+./script.sh oldpattern newpattern
+
+	#!/bin/bash
+	echo "substitution"
+	replace 
+
+3. Write a shell script to print complete pathname associated with pid. User has to pass the PID from command line.
+./script.sh PID
+	#!.bin.bash
+	echo "Enter the PID"
+	read PID
+	pwd
+
+
+4. Write a shell script to print all users on system using awk.
+Hint: Learn what is /etc/passwd file in Linux
+
+5. Write a shell script to list the frequency of words used in a file.
+Hint: Sort and uniq commands will help
+
+6. Write a script to take backup of files changed in last 24 hours and archive them.
+Hint: Read the Find command tutorial in Linux folder. We typically take backups of a folder by "tar"-ring the entire folders.
+	#!/bin/bash
+	echo "back up"
+	find . * -mname +0
+	tar 
+
+7. Write a shell script to determine if a particular service is active or not. For eg: if SSH service is active it should display yes and vice versa. Use netstat , ps commands etc
+
+8. Write a shell script to remove spaces from filenames and replace it with underscore
+Hint: you can use mv command to re-name files 
+		#!/bin/bash	
+		find -name *
+		
+
+
+
+
+9. Write a shell script which prints the df output in more formatted way as below
+
+
+Filesystem                     Size    Used   Avail Capacity  Mounted
+/dev/sda1                   446.71G  18.11G 405.88G       5%  /
+udev                            10M       0     10M       0%  /dev
+tmpfs                         1.14G   9.16M   1.13G       1%  /runh
+
+		#!/bin/bash
+		echo "script"
+		df
+		awk { , , , , ,}
+
+
+10. Write a shell script to summarize available disk space and present in a logical and readable fashion
+	#!/bin/bash
+	echo "cript for summmamrizing"
+	df -h
+
+
+11.  Write a shell function to rename .txt files to .text
+	#!/bin/bash
+	echo "The following are the files"
+	rename(){
+	mv *.txt text
+	}
+
+
