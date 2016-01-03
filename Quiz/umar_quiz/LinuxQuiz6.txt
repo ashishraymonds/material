@@ -1,0 +1,74 @@
+﻿Quiz 3
+
+1. Write a script to delete blank lines in a file. Use cat and awk
+
+#!/bin/bash
+echo "The following command deletes the empty lines in a file using cat command"
+cat filename | grep .
+
+
+#!/bin/bash
+echo "The following command deletes the empty lines in a file using awk command"
+awk 'NF > 0' test
+
+2.  Write a script to delete duplicate lines
+
+
+
+3. Write a shell script to delete a directory tree.
+./script.sh <directory>
+
+4. Write a shell script to see if a process is running.
+Hint: Parse output of ps command
+5. Write a shell script to display the following:
+	Hostname, disk space usage, free & used memory, uptime and logged in users.
+
+
+6. Write a shell script to display syntax of a given command
+#!/bash/bin
+echo "The syntax of a given command is :"
+man [command name]
+
+7. Write a shell to check if a command is in PATH directory list
+
+8. Write a shell script to transfer a file using ftp and scp.
+Read about how to use ftp and scp commands in scripts. Come up with your own example.
+
+
+
+9.  Write a shell script to delete files older than a week.
+#!/bash/bin
+find /path/to/files* -mtime +10 -exec rm {} 
+
+
+
+
+10. Write a shell script to implement -i version of cp command
+#!/bash/bin
+<<Say test1 and test2 has the same content
+cp -i test1 test2
+
+
+11. Write a shell script that Searches down the directory tree from current directory, change the group owner of files in a directory to another group.
+You should also check if new group exists, else, error out.
+./script.sh oldgroup newgroup
+#!/bash/bin
+>>command for search
+find /directory1
+>>changing the group user
+su name1 name2
+>>if statement
+if [ ]
+then
+	echo "group owner exist" 
+else
+	echo "eerror out"
+fi
+
+
+12.  Write a shell script to list files in size order, smallest first.
+#!/bash/bin
+ls -lS /directory1
+
+
+Hint: ls and sort commands
