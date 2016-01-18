@@ -9,13 +9,27 @@ You should write a for loop to go through all files in a directory and then coun
 File1 has 45 lines
 File2 has 20 lines
 2 Files in total, 65 lines in total
+		
+		#!/bin/bash
+		for item in *
+		do
+			if [ -f $item ]
+			then
+				wc -l $item
+				read x
+				echo "$item has $x lines "
+			fi
+		done
+				
 
 2.  Write a shell script to substitute one pattern for another in a text file.
 ./script.sh oldpattern newpattern
 
 	#!/bin/bash
-	echo "substitution"
-	replace 
+	echo "enter the file name"
+	read file1
+
+	sed 's/pattern1/pattern2/g' $file1 
 
 3. Write a shell script to print complete pathname associated with pid. User has to pass the PID from command line.
 ./script.sh PID
@@ -27,24 +41,42 @@ File2 has 20 lines
 
 4. Write a shell script to print all users on system using awk.
 Hint: Learn what is /etc/passwd file in Linux
+		#!/bin/bash
+		 cat /etc/passwd | awk -F':' '{ print $1}'
+
+	
+
 
 5. Write a shell script to list the frequency of words used in a file.
 Hint: Sort and uniq commands will help
+	
 
 6. Write a script to take backup of files changed in last 24 hours and archive them.
 Hint: Read the Find command tutorial in Linux folder. We typically take backups of a folder by "tar"-ring the entire folders.
 	#!/bin/bash
 	echo "back up"
 	find . * -mname +0
-	tar 
+	tar -cvf filename dirname
 
 7. Write a shell script to determine if a particular service is active or not. For eg: if SSH service is active it should display yes and vice versa. Use netstat , ps commands etc
+	#!/bin/bash
+	
+		
 
 8. Write a shell script to remove spaces from filenames and replace it with underscore
 Hint: you can use mv command to re-name files 
 		#!/bin/bash	
-		find -name *
+		for item in *
+		do
+			if [ -f $item ]
+			then
+				sed  's/ /_/g' $item
+			fi
+		done
 		
+
+
+
 
 
 
@@ -59,8 +91,8 @@ tmpfs                         1.14G   9.16M   1.13G       1%  /runh
 
 		#!/bin/bash
 		echo "script"
-		df
-		awk { , , , , ,}
+		df -h
+	
 
 
 10. Write a shell script to summarize available disk space and present in a logical and readable fashion
@@ -71,9 +103,10 @@ tmpfs                         1.14G   9.16M   1.13G       1%  /runh
 
 11.  Write a shell function to rename .txt files to .text
 	#!/bin/bash
-	echo "The following are the files"
 	rename(){
-	mv *.txt text
+	read ftxt
+	read ftext
+	mv $ftxt $ftext
 	}
 
 
