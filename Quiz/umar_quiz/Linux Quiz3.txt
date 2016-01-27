@@ -1,0 +1,50 @@
+﻿Linux Quiz-3
+
+
+1. What is the Network ID, Broadcast Address, and first & last valid IP on the subnetwork that the host 192.168.1.15/26 belongs to?
+Ans:	Network address :192.168.1.0
+     	Broadcast address:192.168.1.255
+    	First valid IP:192.168.1.1
+    	Last valid IP:192.168.1.254
+
+
+2. What is the broadcast address of network 10.14.64.0/20?
+Ans: Broadcast address:10.14.64.255
+
+3. Which of the following is a valid IP host address given the network ID of 191.254.0.0 while using 11 bits for subnetting?
+a. 191.254.0.32
+b. 191.254.0.96
+c. 191.254.1.29
+d. 191.54.1.64
+Ans Both a & b.
+4. List the valid host range for subnet 192.168.15.48/28.
+Ans:	192.168.15.0 to 192.168.15.254.
+ 
+5. What is DNS and explain it's usefulness.
+Ans: 	DNS is an acronym for Domain Naming System.
+     	The main purpose of DNS is that it converts the IP address to a website name and vice versa.
+     	It is easier to remember the website name than the IP address.
+		
+6. Explain the purpose of NS records and CNAME records in DNS?
+
+
+7. Describe the purpose of load balancing and list out the load balancing algorithms.
+
+8. List out the benefits of Proxy Server.
+Ans: Proxy server acts as a medium between the local network to the outside network.
+     The main benefits are :    Increased Security
+				Increased Performance
+
+9. What is NAT and explain it's purpose.
+Refer material.
+Ans:	NAT stand for Network Address Translator.
+    	It acts as a medium between the private and public network.
+        By using NAT, single IP address is used for storing group of IP addresses.
+
+10. Explain terms a) TLD b) FQDN c) sub domain in DNS
+Refer Material  
+
+
+
+
+
